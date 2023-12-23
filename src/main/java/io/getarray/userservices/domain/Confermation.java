@@ -9,6 +9,7 @@ import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,5 +35,11 @@ public class Confermation {
     private  user User ;
 
     // now creating the constocter
+    public Confermation(user User){
+        this.User = User ;
+        this.createdDate = LocalDateTime.now();
+        this.token = UUID.randomUUID().toString();
+
+    }
 
 }
