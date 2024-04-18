@@ -6,12 +6,7 @@ import io.getarrays.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.time.LocalDateTime;
@@ -23,7 +18,10 @@ import java.util.Map;
  * @license Get Arrays, LLC (https://getarrays.io)
  * @since 6/24/2023
  */
+//allow the cross border origin in the code
+// @CrossOrigin(origins = "http://127.0.0.1:5501/")
 
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
@@ -32,6 +30,7 @@ public class UserResource {
 
     @PostMapping
     public ResponseEntity<HttpResponse> createUser(@RequestBody User user) {
+        //allow the cross border origin in the code
         User newUser = userService.saveUser(user);
         return ResponseEntity.created(URI.create("")).body(
                 HttpResponse.builder()
