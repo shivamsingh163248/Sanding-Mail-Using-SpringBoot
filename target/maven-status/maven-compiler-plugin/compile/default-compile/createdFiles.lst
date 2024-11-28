@@ -1,0 +1,16 @@
+io\getarrays\userservice\utils\EmailUtils.class
+io\getarrays\userservice\repository\ConfirmationRepository.class
+io\getarrays\userservice\Application.class
+io\getarrays\userservice\domain\User$UserBuilderImpl.class
+io\getarrays\userservice\service\impl\EmailServiceImpl.class
+io\getarrays\userservice\domain\Confirmation.class
+io\getarrays\userservice\service\impl\UserServiceImpl.class
+io\getarrays\userservice\repository\UserRepository.class
+io\getarrays\userservice\domain\HttpResponse.class
+io\getarrays\userservice\domain\User.class
+io\getarrays\userservice\service\EmailService.class
+io\getarrays\userservice\domain\HttpResponse$HttpResponseBuilderImpl.class
+io\getarrays\userservice\resource\UserResource.class
+io\getarrays\userservice\domain\User$UserBuilder.class
+io\getarrays\userservice\domain\HttpResponse$HttpResponseBuilder.class
+io\getarrays\userservice\service\UserService.class
